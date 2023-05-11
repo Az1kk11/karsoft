@@ -1,0 +1,147 @@
+.info {
+    height: auto;
+    width: 100%;
+    background-image: url(../imags/background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.info h4 {
+    font-size: 16px;
+    color:#009846;
+    line-height: 19.36px;
+    font-weight: 700;
+}
+.info h3{
+    font-size: 34px;
+    color:#222D50;
+    line-height: 41.15px;
+    font-weight: 700;
+}
+.info p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 180px;
+}
+.box .ellipse-img{
+    width: 351px;
+    height: 451px;
+    position: absolute;
+    right: -10px;
+    bottom: -130px;
+    z-index: 1;
+}
+.info .img-box {
+    width: 515px;
+    height: 460px;
+    position: relative;
+}
+
+.info .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position:absolute;
+    z-index: 120;
+}
+.info Button{
+    width: 200px;
+}
+@media (max-width: 1200px) {
+    .info{
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .info h3{
+        font-size: 32px;
+    }
+    .info .img-box {
+        width: 415px;
+        height: 360px;
+        position: relative;
+    }
+    
+    .info .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position:absolute;
+        z-index: 120;
+    }
+}
+@media (max-width: 1000px) {
+    .info h4{
+        margin-top: 30px;
+    }
+    .info .img-box{
+        width: 470px;
+        height: 420px;
+        margin-left: 100px;
+        margin-top: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .info h4{
+        margin-top: 30px;
+    }
+    .info .img-box{
+        width: 470px;
+        height: 420px;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .box{
+        padding-top: 0;
+    }
+}
+@media (max-width: 570px) {
+    .info Button{
+        margin: 0 auto;
+    }
+    .info .img-box{
+        width: 370px;
+        height: 320px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .box{
+        padding-top: 0;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .box h4,
+    .box h3,
+    .box p{
+        text-align: center !important;
+    }
+    .box .ellipse-img{
+        width: 251px;
+        height: 321px;
+    }
+}
+@media (max-width: 375px){
+    .info .img-box{
+        width: 270px;
+        height: 234px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .box h3{
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .box p{
+        font-size: 14px;
+    }
+}

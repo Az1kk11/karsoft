@@ -1,0 +1,132 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.nav-wrapper {
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-wrapper .logo {
+    width: 186px;
+}
+
+.nav-wrapper .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-wrapper ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.nav-wrapper ul li {
+    margin-left: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+.nav-wrapper ul li a {
+    color: #fff;
+}
+.nav-wrapper .active-nav-item{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #009846;
+    color: #009846;
+    text-shadow: 0 0 10px #009846;
+}
+
+.nav-wrapper ul .copy span {
+    color: #009846;
+    position: absolute;
+    top: 5px;
+    font-weight: 500;
+    display: none;
+}
+.nav-wrapper ul .copy:hover span{
+    display: block;
+}
+.nav-wrapper .select {
+    width: 66px;
+    margin-left: 20px;
+}
+.bars-box{
+    display: none;
+    color: #fff;
+}
+.mobile-logo{
+    display: none;
+}
+.sticky-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.688);
+    z-index: 111111;
+}
+
+@media (max-width:1200px) {
+    .nav-wrapper ul li{
+        margin-left: 20px;
+        font-size: 14px;
+    }
+    .nav-wrapper ul {
+        margin-top: 16px;
+    }
+}
+@media (max-width:1000px) {
+    .mobile-logo{
+        display: block;
+        width: 130px;
+    }
+    .mobile-logo img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .nav-wrapper .logo {
+        width: 156px;
+    }
+    .bars-box{
+        display: block;
+    }
+    .nav-wrapper .navbar{
+        position: fixed;
+        top: 0;
+        right: -300px;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+    }
+    .nav-wrapper .active_menu{
+        right: 0;
+    }
+    .nav-wrapper .navbar ul{
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .nav-wrapper .navbar ul li{
+        margin-top: 20px;
+        padding-right: 30px;
+        font-size: 16px;
+    }
+    .nav-wrapper .navbar ul .select{
+        margin-top: 10px;
+        margin-left: 28px;
+    }
+    
+}
