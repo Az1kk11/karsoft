@@ -101,5 +101,5 @@ const NavLinkName = [
   { display: 'Biz haqimizda', path: 'about', offset: 0 },
   { display: 'Xizmatlarimiz', path: 'services', offset: 0 },
   { display: 'Portfolio', path: 'portfolio', offset: 0 },
-  { display: 'Vakansiyalar', path: 'vacancy', offset: 0 },
+  { display: 'Vakansiyalar', path: 'vacansy', offset: 0 },
 ]

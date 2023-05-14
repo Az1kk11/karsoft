@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../Header/Header'
-import { About, Cards, FeedbackSwiper, Home, Portfolio, Services } from '../../Page'
+import { About, Cards, FeedbackSwiper, Home, Portfolio, Services, Vacansy } from '../../Page'
 function Layout() {
 
   return (
@@ -12,6 +12,7 @@ function Layout() {
       <Services/>
       <Portfolio/>
       <FeedbackSwiper/>
+      <Vacansy/>
     </>
   )
 }
