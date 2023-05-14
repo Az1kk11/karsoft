@@ -1,8 +1,9 @@
 import React from 'react'
 import { Container } from 'reactstrap'
 import Button from '../assets/UI/Button/button'
-import '../assets/css/Services.css'
+import '../css/Services.css'
 import aboutBac from '../assets/imags/EllipseAbout.png'
+
 function Services() {
   return (
     <section className='about' id='services'>

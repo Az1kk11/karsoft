@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/css/Cards.css'
+import '../css/Cards.css'
 import { Container } from 'reactstrap'
 function Cards() {
 

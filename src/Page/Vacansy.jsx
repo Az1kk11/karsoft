@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'reactstrap'
 import vacansyImg from '../assets/imags/vacansy.png'
 import vacansySircle from '../assets/imags/Ellipse.png'
 
-import '../assets/css/Vacansy.css'
+import '../css/Vacansy.css'
 
 function Vacansy() {
     return (

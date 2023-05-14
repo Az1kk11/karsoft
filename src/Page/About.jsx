@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/css/About.css'
+import '../css/About.css'
 import { Col, Container, Row } from 'reactstrap'
 import Button from '../assets/UI/Button/button'
 import infoImg from '../assets/imags/Rectangle.png'

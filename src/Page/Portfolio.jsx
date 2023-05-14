@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from 'reactstrap'
-import '../assets/css/Portfolio.css'
+import '../css/Portfolio.css'
 import Cards from '../assets/UI/Cards/Cards'
 import data from '../assets/manifest.json'
 import { motion } from 'framer-motion'

@@ -3,7 +3,7 @@ import { Container } from 'reactstrap'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css';
-import '../assets/css/FeedbackSwiper.css'
+import '../css/FeedbackSwiper.css'
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay'
 import slideLeft from '../assets/imags/avatar-left.png'

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/css/Home.css'
+import '../css/Home.css'
 import { Container } from 'reactstrap'
 import Button from '../assets/UI/Button/button'
 import { motion } from 'framer-motion'
