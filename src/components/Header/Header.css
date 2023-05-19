@@ -96,13 +96,13 @@ header {
         object-fit: cover;
     }
     .nav-wrapper .logo {
-        width: 156px;
+        width: 146px;
     }
     .bars-box{
         display: block;
     }
     .sticky-header{
-        height: 10vh;
+        height: 8vh;
         padding: 0;
     }
     .nav-wrapper .navbar{

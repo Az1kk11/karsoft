@@ -2,6 +2,7 @@
     height: auto;
     padding: 60px 0;
     background-image: url(../assets/imags/portfolio.png);
+    overflow: hidden;
 }
 
 .portfolio-page .top-content {
