@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import logo from '../../assets/imags/logo-shorny.png'
 
 import './Footer.css'
+import { Link } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
 
 function Footer() {
     return (
@@ -40,28 +42,31 @@ function Footer() {
                     </ul>
                     <ul data-aos="fade-right">
                         <li className='title'>Biz haqimizda</li>
-                        <li>
-                            Home
-                        </li>
-                        <li>
-                            Biz haqimizda
-                        </li>
-                        <li>
-                            Xizmatlarimiz
-                        </li>
-                        <li>
-                            Portfolio
-                        </li>
-                        <li>
-                            Vakansiya
-                        </li>
+                        {NavLinkName.map((item, index) => (
+                            <motion.li whileTap={{ scale: 0.9 }} key={index}>
+                                <Link
+                                    to={item.path}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={item.offset}
+                                    duration={0}
+                                    className='nav-bottom'
+                                >
+                                    {item.display}
+                                </Link>
+                            </motion.li>
+                        ))}
                     </ul>
                     <ul data-aos="fade-right">
                         <li className='title'>Bizning manzil:</li>
                         <li>Qoraqalpog’iston Respublikasi Nukus shahri.</li>
                         <li className='icon-footer'>
-                            <i class="ri-instagram-fill"></i>
-                            <i class="ri-telegram-fill"></i>
+                            <NavLink to={'https://instagram.com/karsoftuz?igshid=MmJiY2I4NDBkZg=='} target='blank'>
+                                <i class="ri-instagram-fill"></i>
+                            </NavLink>
+                            <NavLink to={'https://t.me/karsoftuz'} target='blank'>
+                                <i class="ri-telegram-fill"></i>
+                            </NavLink>
                             <i class="ri-facebook-box-fill"></i>
                             <i class="ri-linkedin-box-fill"></i>
                         </li>
@@ -76,3 +81,11 @@ function Footer() {
 }
 
 export default Footer
+
+
+const NavLinkName = [
+    { display: 'Biz haqimizda', path: 'about', offset: 0 },
+    { display: 'Xizmatlarimiz', path: 'services', offset: 0 },
+    { display: 'Portfolio', path: 'portfolio', offset: 0 },
+    { display: 'Vakansiyalar', path: 'vacansy', offset: 0 },
+]

@@ -27,9 +27,12 @@
 .footer-page ul li{
     font-size: 16px;
     margin-top: 10px;
-    color: #5C606A;
+    color: #5C606A !important;
     font-weight: 400;
     cursor: pointer;
+}
+.footer-page .nav-bottom{
+    color: #5C606A !important;
 }
 .footer-page ul li i{
     color: #009846;

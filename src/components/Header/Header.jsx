@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Container, Input } from 'reactstrap'
 import logoImg from '../../assets/imags/karsoft.png'
 import './Header.css'
