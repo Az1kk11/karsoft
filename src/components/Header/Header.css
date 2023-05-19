@@ -103,7 +103,7 @@ header {
     }
     .sticky-header{
         height: 8vh;
-        padding: 0 15px;
+        padding: 0px 20px;
     }
     .nav-wrapper .navbar{
         position: fixed;
