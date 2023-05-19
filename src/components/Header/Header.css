@@ -101,7 +101,7 @@ header {
     .bars-box{
         display: block;
     }
-    .bars-box i{
+    .bars-box span i{
         font-size: 22px;
     }
     .sticky-header{
