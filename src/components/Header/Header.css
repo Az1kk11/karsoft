@@ -101,6 +101,9 @@ header {
     .bars-box{
         display: block;
     }
+    .bars-box i{
+        font-size: 18px;
+    }
     .sticky-header{
         height: 8vh;
         padding: 0px 20px;
