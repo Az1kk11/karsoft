@@ -8,7 +8,7 @@ function Home() {
     <section className='home' id='home'>
       <Container>
         <div className="d-flex align-items-flex-start flex-column">
-          <p>Morbi nibh adipiscing malesuada pharetra sodales est.</p>
+          <p data-aos="fade-left">Morbi nibh adipiscing malesuada pharetra sodales est.</p>
           <div className="d-flex ">
             <Button />
             <motion.button whileTap={{ scale: 0.9 }} className='btn-play'>

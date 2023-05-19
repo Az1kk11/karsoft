@@ -27,13 +27,16 @@ function Portfolio() {
                 <div className="portfolio-page">
                     <div className="top-content">
                         <div className="title">
-                            <h4>Portfolio</h4>
-                            <h3>Bizning ishlarimiz</h3>
-                            <h2>Galereya</h2>
+                            <h4 data-aos="fade-right">Portfolio</h4>
+                            <h3 data-aos="fade-right" 
+                                data-aos-easing="ease-in-sine">Bizning ishlarimiz</h3>
+                            <h2 data-aos="fade-right"
+                                data-aos-easing="ease-in-sine">Galereya</h2>
                         </div>
                         <ul>
                             {category.map((item, index) => (
                                 <motion.li
+                                    data-aos="fade-up"
                                     className={filter === item.type ? 'active' : ''}
                                     onClick={() => setFilter(item.type)}
                                     whileTap={{ scale: 0.9 }}

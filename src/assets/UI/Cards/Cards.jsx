@@ -6,7 +6,9 @@ function Cards({ projects }) {
     return (
         <div className="cards-img">
             {projects.map((item, index) => item.filtered === true ? (
-                <div className="card-img" key={index}>
+                <div className="card-img" key={index} data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
                     <div className="image-content">
                         <img src={item.img} alt="Title" />
                     </div>

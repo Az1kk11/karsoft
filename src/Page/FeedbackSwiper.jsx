@@ -17,10 +17,10 @@ function FeedbackSwiper() {
         <section className='feedback'>
             <Container>
                 <div className="feedback-swiper">
-                    <h4>Feedback</h4>
-                    <h3>Biz haqimizda nima deyishadi</h3>
-                    <img src={slideLeft} alt="" className='slide-left' />
-                    <img src={slideRight} alt="" className='slide-right' />
+                    <h4 data-aos="fade-up">Feedback</h4>
+                    <h3 data-aos="fade-up">Biz haqimizda nima deyishadi</h3>
+                    <img src={slideLeft} alt="" className='slide-left' data-aos="fade-right" />
+                    <img src={slideRight} alt="" className='slide-right' data-aos="fade-left" />
                     <img src={slideTop} alt="" className='slide-top' />
                     <Swiper
                         modules={[Pagination, A11y, Autoplay]}

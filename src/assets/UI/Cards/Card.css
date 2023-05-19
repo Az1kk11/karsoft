@@ -26,6 +26,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
+    transition: 500ms;
+}
+.cards-img img:hover{
+    transform: scale(1.2);
+    transition: 500ms;
 }
 .cards-img .text-content{
     display: flex;
@@ -58,6 +64,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 12px;
+    cursor: pointer;
 }
 .cards-img .icon-card i{
     color: #009846;

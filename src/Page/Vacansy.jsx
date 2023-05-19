@@ -12,13 +12,13 @@ function Vacansy() {
             <Container>
                 <Row>
                     <Col lg='6' className='d-flex justify-content-center flex-column'>
-                        <h4>Vakansiya</h4>
+                        <h4 data-aos="fade-right">Vakansiya</h4>
                         {vacansy.length === 0 ? (
-                            <h3>Hozirsha bizda bosh ish orinlari yoq</h3>
+                            <h3 data-aos="fade-right">Hozirsha bizda bosh ish orinlari yoq</h3>
                         ) : (
                             <>
-                                <p>Siz ham bizning jamoamizning tarkibida bo’lishingiz mumkin</p>
-                                <ul>
+                                <p data-aos="fade-right">Siz ham bizning jamoamizning tarkibida bo’lishingiz mumkin</p>
+                                <ul data-aos="fade-right">
                                     {vacansy.map((item, index) => (
                                         <li key={index}>
                                             <span></span>
@@ -32,7 +32,7 @@ function Vacansy() {
                     </Col>
                     <Col lg='6' className='d-flex justify-content-center justify-content-center'>
                         <div className="left-img-box">
-                            <img src={vacansyImg} className='left-img' alt="" />
+                            <img src={vacansyImg} className='left-img' alt="" data-aos="fade-left" />
                         </div>
                         <img src={vacansySircle} className='vacansy-sircle' alt="" />
                     </Col>

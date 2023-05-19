@@ -10,7 +10,7 @@ function Footer() {
         <section id='footer'>
             <Container>
                 <div className="footer-page">
-                    <ul className='left-1'>
+                    <ul className='left-1' data-aos="fade-right">
                         <li>
                             <img src={logo} alt="Karsoft" />
                         </li>
@@ -23,7 +23,7 @@ function Footer() {
                             +998 (99) 001-05-05
                         </li>
                     </ul>
-                    <ul>
+                    <ul data-aos="fade-right">
                         <li className='title'>Xizmatlarimiz</li>
                         <li>
                             Web dasturlash
@@ -38,7 +38,7 @@ function Footer() {
                             Marketing
                         </li>
                     </ul>
-                    <ul>
+                    <ul data-aos="fade-right">
                         <li className='title'>Biz haqimizda</li>
                         <li>
                             Home
@@ -56,7 +56,7 @@ function Footer() {
                             Vakansiya
                         </li>
                     </ul>
-                    <ul>
+                    <ul data-aos="fade-right">
                         <li className='title'>Bizning manzil:</li>
                         <li>Qoraqalpog’iston Respublikasi Nukus shahri.</li>
                         <li className='icon-footer'>

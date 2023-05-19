@@ -1,6 +1,7 @@
 .footer-page{
     display: flex;
     justify-content: space-between;
+    padding: 20px 0;
 }
 #footer .footer-bottom{
     height: 40px;

@@ -1,6 +1,7 @@
 .feedback{
     background-color: #f6f6f6;
     padding: 60px 0;
+    overflow: hidden;
 }
 .feedback-swiper{
     width: 100%;

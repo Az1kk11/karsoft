@@ -29,9 +29,10 @@
 }
 .about .about-page .cards .card:hover{
     background-color: #009846;
-    box-shadow: none;
+    /* box-shadow: none; */
     color: #fff;
     transition: .5s;
+    transform: scale(1.1);
 }
 .about .about-page .cards .card:hover p,
 .about .about-page .cards .card:hover li{
