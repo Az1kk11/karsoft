@@ -33,9 +33,9 @@ function Header() {
   }, [])
 
   return (
-    <header ref={headerRef}>
+    <header>
       <Container>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper" ref={headerRef}>
           <div className="logo">
             <Link
               to='home'
