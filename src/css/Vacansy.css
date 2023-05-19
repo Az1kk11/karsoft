@@ -1,4 +1,4 @@
-#vacansy{
+#vacansy {
     background-image: url(../assets/imags/background.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -7,23 +7,27 @@
     position: relative;
     overflow: hidden;
 }
-#vacansy .row{
+
+#vacansy .row {
     height: 80vh;
 }
-#vacansy .left-img-box{
+
+#vacansy .left-img-box {
     position: relative;
     width: 510px;
     height: 460px;
     margin-top: 30px;
 }
-#vacansy .left-img{
+
+#vacansy .left-img {
     position: absolute;
     z-index: 12;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-#vacansy .vacansy-sircle{
+
+#vacansy .vacansy-sircle {
     position: absolute;
     width: 340px;
     bottom: -100px;
@@ -31,28 +35,32 @@
     transform: rotate(23deg);
     z-index: 1;
 }
-#vacansy h4{
+
+#vacansy h4 {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
     color: #009846;
 }
+
 #vacansy h3,
-#vacansy p{
+#vacansy p {
     font-weight: 700;
     font-size: 34px;
     line-height: 41px;
     color: #222D50;
     width: 80%;
 }
-#vacansy ul li{
+
+#vacansy ul li {
     position: relative;
     color: #5C606A;
     font-size: 16px;
     font-weight: 400;
     line-height: 29px;
 }
-#vacansy ul li::after{
+
+#vacansy ul li::after {
     content: "";
     position: absolute;
     left: -35px;
@@ -61,14 +69,17 @@
     width: 30px;
     background-color: #5C606A;
 }
-#vacansy Button{
+
+#vacansy Button {
     width: 200px;
 }
+
 @media (max-width:1200px) {
-    #vacansy .row{
+    #vacansy .row {
         height: auto;
     }
-    #vacansy .left-img-box{
+
+    #vacansy .left-img-box {
         position: relative;
         width: 510px;
         height: 460px;
@@ -76,58 +87,72 @@
         margin-left: -45px;
     }
 }
+
 @media (max-width:1000px) {
-    #vacansy .left-img-box{
+    #vacansy .left-img-box {
         width: 510px;
         height: 460px;
         margin-left: 0;
     }
 }
+
 @media (max-width:768px) {
+
     #vacansy h4,
     #vacansy h3,
-    #vacansy p{
+    #vacansy p {
         text-align: center;
         width: 100%;
     }
-    #vacansy Button{
+
+    #vacansy Button {
         width: 100%;
     }
 }
+
 @media (max-width: 540px) {
-    #vacansy .left-img-box{
+    #vacansy .left-img-box {
         width: 410px;
         height: 360px;
     }
-    #vacansy .vacansy-sircle{
+
+    #vacansy .vacansy-sircle {
         width: 240px;
     }
 }
+
 @media (max-width: 540px) {
-    #vacansy{
+    #vacansy {
         padding: 50px 0;
     }
-    #vacansy .left-img-box{
+
+    #vacansy .left-img-box {
         width: 310px;
         height: 270px;
     }
-    #vacansy .vacansy-sircle{
+
+    #vacansy .vacansy-sircle {
         width: 240px;
     }
 }
+
 @media (max-width: 340px) {
+
     #vacansy h3,
-    #vacansy p{
+    #vacansy p {
         font-size: 30px;
     }
-    #vacansy{
+
+    #vacansy {
         padding: 50px 0;
     }
-    #vacansy .left-img-box{
+
+    #vacansy .left-img-box {
         width: 240px;
         height: 220px;
     }
-    #vacansy .vacansy-sircle{
+
+    #vacansy .vacansy-sircle {
         bottom: -30px;
         transform: rotate(45deg);
         width: 140px;

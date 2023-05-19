@@ -1,184 +1,184 @@
 {
-    "cards":[
-        { 
+    "cards": [
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio website",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "website"
+            "type": "website"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio website",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "website"
+            "type": "website"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio website",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "website"
+            "type": "website"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio website",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "website"
+            "type": "website"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio website",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "website"
+            "type": "website"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio website",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "website"
+            "type": "website"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio apps",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "apps"
+            "type": "apps"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio apps",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "apps"
+            "type": "apps"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio apps",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "apps"
+            "type": "apps"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio apps",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "apps"
+            "type": "apps"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio apps",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "apps"
+            "type": "apps"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio apps",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "apps"
+            "type": "apps"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio telegram-bot",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "telegram-bot"
+            "type": "telegram-bot"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio telegram-bot",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "telegram-bot"
+            "type": "telegram-bot"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio telegram-bot",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "telegram-bot"
+            "type": "telegram-bot"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio telegram-bot",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "telegram-bot"
+            "type": "telegram-bot"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio telegram-bot",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "telegram-bot"
+            "type": "telegram-bot"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio telegram-bot",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "telegram-bot"
+            "type": "telegram-bot"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio ux/ui",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "ux/ui"
+            "type": "ux/ui"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio ux/ui",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "ux/ui"
+            "type": "ux/ui"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio ux/ui",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "ux/ui"
+            "type": "ux/ui"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio ux/ui",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "ux/ui"
+            "type": "ux/ui"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio ux/ui",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "ux/ui"
+            "type": "ux/ui"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio ux/ui",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "ux/ui"
+            "type": "ux/ui"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio marketing",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "marketing"
+            "type": "marketing"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio marketing",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "marketing"
+            "type": "marketing"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio marketing",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "marketing"
+            "type": "marketing"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio marketing",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "marketing"
+            "type": "marketing"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio marketing",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "marketing"
+            "type": "marketing"
         },
-        { 
+        {
             "img": "https://www.web-labs.kz/wp-content/uploads/2014/10/web-site2-1200x600.jpg",
             "title": "Portfolio marketing",
             "description": "Batafsil bu yerda tanishing...",
-            "type" : "marketing"
+            "type": "marketing"
         }
     ]
 }

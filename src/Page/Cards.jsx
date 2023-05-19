@@ -1,8 +1,10 @@
 import React from 'react'
 import CountUp from 'react-countup';
 
-import '../css/Cards.css'
 import { Container } from 'reactstrap'
+
+import '../css/Cards.css'
+
 function Cards() {
 
     return (
@@ -24,7 +26,7 @@ function Cards() {
                             <CountUp
                                 end={184}
                                 duration={8}
-                                />
+                            />
                             +
                         </h3>
                         <h4>Tugallangan ishlar</h4>

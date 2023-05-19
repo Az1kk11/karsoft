@@ -1,8 +1,11 @@
 import React from 'react'
-import '../css/Home.css'
+
 import { Container } from 'reactstrap'
 import Button from '../assets/UI/Button/button'
 import { motion } from 'framer-motion'
+
+import '../css/Home.css'
+
 function Home() {
   return (
     <section className='home' id='home'>

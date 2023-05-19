@@ -1,6 +1,8 @@
 import React from 'react'
+
 import Button from '../assets/UI/Button/button'
 import { Col, Container, Row } from 'reactstrap'
+
 import vacansyImg from '../assets/imags/vacansy.png'
 import vacansySircle from '../assets/imags/Ellipse.png'
 

@@ -5,7 +5,7 @@
     border-radius: 14px;
     width: 1040px;
     height: 149px;
-    position: absolute; 
+    position: absolute;
     bottom: -240px;
     left: 0;
     right: 0;
@@ -27,7 +27,8 @@
     line-height: 24.2px;
     color: #222D50;
 }
-.cards-page .cards .card{
+
+.cards-page .cards .card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +55,8 @@
         box-shadow: none;
         background-color: transparent;
     }
-    .cards-page .cards .card{
+
+    .cards-page .cards .card {
         box-shadow: 0 0 10px rgba(164, 164, 164, 0.679);
         width: 200px;
         height: 120px;
@@ -64,25 +66,28 @@
 }
 
 @media (max-width:768px) {
-    .cards-page{
+    .cards-page {
         height: auto;
         padding: 20px;
     }
+
     .cards-page .cards {
         width: auto;
         height: auto;
-        position:static;
+        position: static;
         padding: 0;
         box-shadow: none;
         grid-template-columns: 1fr;
         margin-top: 30px;
     }
-    .cards-page .cards .card{
+
+    .cards-page .cards .card {
         width: 100%;
         height: auto;
-        padding: 20px ;
-        flex-direction:row-reverse;
+        padding: 20px;
+        flex-direction: row-reverse;
     }
+
     .cards-page .cards h3 {
         margin-left: 20px;
     }

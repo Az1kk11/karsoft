@@ -1,4 +1,4 @@
-.btn-success{
+.btn-success {
     border-radius: 6px;
     padding: 10px 23px;
     gap: 10px;
@@ -9,13 +9,15 @@
     border: none;
     color: #fff;
 }
-.btn-success span{
+
+.btn-success span {
     background-color: #fff;
     border-radius: 50%;
     margin-left: 10px;
-    
+
 }
-.btn-success span i{
+
+.btn-success span i {
     color: #009846;
     margin-left: 2px;
     margin-right: 2px;

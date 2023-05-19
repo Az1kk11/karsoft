@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Container } from 'reactstrap'
-import '../css/Portfolio.css'
-import Cards from '../assets/UI/Cards/Cards'
+
 import data from '../assets/manifest.json'
+
+import { Container } from 'reactstrap'
+import Cards from '../assets/UI/Cards/Cards'
 import { motion } from 'framer-motion'
+
+import '../css/Portfolio.css'
 
 function Portfolio() {
     const [filter, setFilter] = useState('website')
@@ -28,7 +31,7 @@ function Portfolio() {
                     <div className="top-content">
                         <div className="title">
                             <h4 data-aos="fade-right">Portfolio</h4>
-                            <h3 data-aos="fade-right" 
+                            <h3 data-aos="fade-right"
                                 data-aos-easing="ease-in-sine">Bizning ishlarimiz</h3>
                             <h2 data-aos="fade-right"
                                 data-aos-easing="ease-in-sine">Galereya</h2>

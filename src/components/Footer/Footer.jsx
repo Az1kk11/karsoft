@@ -1,11 +1,12 @@
-import React from 'react'
+import { NavLink } from 'react-router-dom'
+
+import { Link } from 'react-scroll'
 import { Container } from 'reactstrap'
 import { motion } from 'framer-motion'
+
 import logo from '../../assets/imags/logo-shorny.png'
 
 import './Footer.css'
-import { Link } from 'react-scroll'
-import { NavLink } from 'react-router-dom'
 
 function Footer() {
     return (

@@ -1,9 +1,12 @@
 import React, { useEffect, useRef } from 'react'
+
 import { Container, Input } from 'reactstrap'
-import logoImg from '../../assets/imags/karsoft.png'
-import './Header.css'
 import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
+
+import logoImg from '../../assets/imags/karsoft.png'
+
+import './Header.css'
 
 function Header() {
   const menuRef = useRef(null)

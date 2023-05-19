@@ -1,6 +1,6 @@
-import React from 'react'
-import './Card.css'
 import { motion } from 'framer-motion'
+
+import './Card.css'
 
 function Cards({ projects }) {
     return (

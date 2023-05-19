@@ -1,8 +1,11 @@
 import React from 'react'
+
 import { Container } from 'reactstrap'
 import Button from '../assets/UI/Button/button'
-import '../css/Services.css'
+
 import aboutBac from '../assets/imags/EllipseAbout.png'
+
+import '../css/Services.css'
 
 function Services() {
   return (
@@ -51,7 +54,7 @@ function Services() {
             <h4 data-aos="fade-left">XIZMATLARIMIZ</h4>
             <h3 data-aos="fade-left">Bizning xizmatlarimiz <br />O’z ichiga oladi.</h3>
             <p data-aos="fade-left">Morbi nibh adipiscing malesuada pharetra sodales est. Rhoncus sollicitudin et etiam a. Vitae ullamcorper sit magnis orci pellentesque ipsum tellus. Tempus sed id lectus lacus, integer purus, amet pulvinar vitae...</p>
-            <Button/>
+            <Button />
             <img src={aboutBac} alt="About" />
           </div>
         </div>

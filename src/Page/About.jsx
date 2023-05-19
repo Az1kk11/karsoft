@@ -1,9 +1,12 @@
 import React from 'react'
-import '../css/About.css'
+
 import { Col, Container, Row } from 'reactstrap'
 import Button from '../assets/UI/Button/button'
+
 import infoImg from '../assets/imags/Rectangle.png'
 import ellipseImg from '../assets/imags/Ellipse.png'
+
+import '../css/About.css'
 
 function About() {
     return (
@@ -14,13 +17,13 @@ function About() {
                         <h4 data-aos="fade-right">BIZ HAQIMIZDA</h4>
                         <h3 data-aos="fade-right">Zamonaviy axborot texnologiyalar biznesingizni rivojlantiradi !</h3>
                         <p data-aos="fade-right">Morbi nibh adipiscing malesuada pharetra sodales est. Rhoncus sollicitudin et etiam a. Vitae ullamcorper sit magnis orci pellentesque ipsum tellus. Tempus sed id lectus lacus, integer purus, amet pulvinar vitae...</p>
-                        <Button/>
+                        <Button />
                     </Col>
                     <Col lg='6'>
                         <div className="img-box">
-                            <img src={infoImg} alt="Info" data-aos="fade-left"  />
+                            <img src={infoImg} alt="Info" data-aos="fade-left" />
                         </div>
-                            <img src={ellipseImg} alt="Info" className='ellipse-img' />
+                        <img src={ellipseImg} alt="Info" className='ellipse-img' />
                     </Col>
                 </Row>
             </Container>

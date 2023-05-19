@@ -1,6 +1,8 @@
 import React from 'react'
+
 import { Container } from 'reactstrap'
 import Button from '../assets/UI/Button/button'
+
 import '../css/Project.css'
 
 function Project() {

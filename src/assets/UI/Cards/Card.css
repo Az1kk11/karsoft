@@ -1,11 +1,12 @@
-.cards-img{
+.cards-img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     gap: 15px;
     margin-top: 30px;
 }
-.cards-img .card-img{
+
+.cards-img .card-img {
     width: 333px;
     height: 333px;
     box-shadow: 0 5px 5px #ddd;
@@ -16,46 +17,54 @@
     justify-content: space-between;
     background-color: #fff;
 }
-.cards-img .image-content{
+
+.cards-img .image-content {
     width: 100%;
     height: 200px;
     border-radius: 7px;
     overflow: hidden;
 }
-.cards-img img{
+
+.cards-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     cursor: pointer;
     transition: 500ms;
 }
-.cards-img img:hover{
+
+.cards-img img:hover {
     transform: scale(1.2);
     transition: 500ms;
 }
-.cards-img .text-content{
+
+.cards-img .text-content {
     display: flex;
     justify-content: space-between;
     padding-bottom: 15px;
 }
-.cards-img .card-title{
+
+.cards-img .card-title {
     display: flex;
     flex-direction: column;
 }
-.cards-img .text-content h3{
+
+.cards-img .text-content h3 {
     font-weight: 500;
     font-size: 20px;
     line-height: 24.2px;
     color: #222D50;
     margin-bottom: 10px;
 }
+
 .cards-img .text-content h5 {
     font-weight: 400;
     font-size: 16px;
     line-height: 19.36px;
     color: #5C606A;
 }
-.cards-img .icon-card{
+
+.cards-img .icon-card {
     border: 2px solid #009846;
     border-radius: 50%;
     height: 40px;
@@ -66,47 +75,56 @@
     margin-top: 12px;
     cursor: pointer;
 }
-.cards-img .icon-card i{
+
+.cards-img .icon-card i {
     color: #009846;
     margin-left: 4px;
     font-size: 26px;
     transform: translateX(-10%);
     margin-top: 3px;
 }
-.cards-img .icon-card:hover{
+
+.cards-img .icon-card:hover {
     background-color: #009846;
     transition: all .5s;
 }
-.cards-img .icon-card:hover i{
+
+.cards-img .icon-card:hover i {
     color: #fff;
     transition: all .5s;
 }
-.cards-img .text-content{
+
+.cards-img .text-content {
     margin-top: 10px;
 }
 
 @media (max-width:1200px) {
-    .cards-img .card-img{
+    .cards-img .card-img {
         width: 280px;
     }
 }
+
 @media (max-width:994px) {
-    .cards-img .card-img{
+    .cards-img .card-img {
         width: 330px;
     }
-    .cards-img{
+
+    .cards-img {
         grid-template-columns: 1fr 1fr;
     }
 }
+
 @media (max-width: 767px) {
-    .cards-img .card-img{
+    .cards-img .card-img {
         width: 100%;
         height: auto;
     }
-    .cards-img{
+
+    .cards-img {
         grid-template-columns: 1fr;
     }
-    .cards-img .image-content{
+
+    .cards-img .image-content {
         height: 250px !important;
     }
 }

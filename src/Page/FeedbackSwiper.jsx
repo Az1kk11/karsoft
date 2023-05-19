@@ -1,11 +1,13 @@
 import React from 'react'
+
 import { Container } from 'reactstrap'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import 'swiper/css';
 import '../css/FeedbackSwiper.css'
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay'
+import 'swiper/css';
+
 import slideLeft from '../assets/imags/avatar-left.png'
 import slideRight from '../assets/imags/avatar-right.png'
 import slideTop from '../assets/imags/slidetop.png'
