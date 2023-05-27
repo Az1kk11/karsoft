@@ -9,6 +9,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import 'remixicon/fonts/remixicon.css'
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import './index.css';
+import { Provider } from 'react-redux';
+import store from './Redux/store/index'
+import { ToastContainer } from 'react-toastify';
 
 AOS.init();
 
@@ -16,7 +19,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Provider store={store}>
+        <ToastContainer
+          theme="dark"
+          position="top-center"
+          autoClose={2000}
+          closeOnClick
+          pauseOnHover={false}
+        />
+        <App />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

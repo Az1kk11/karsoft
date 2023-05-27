@@ -63,13 +63,13 @@ function Footer() {
                         <li>Qoraqalpog’iston Respublikasi Nukus shahri.</li>
                         <li className='icon-footer'>
                             <NavLink to={'https://instagram.com/karsoftuz?igshid=MmJiY2I4NDBkZg=='} target='blank'>
-                                <i class="ri-instagram-fill"></i>
+                                <i className="ri-instagram-fill"></i>
                             </NavLink>
                             <NavLink to={'https://t.me/karsoftuz'} target='blank'>
-                                <i class="ri-telegram-fill"></i>
+                                <i className="ri-telegram-fill"></i>
                             </NavLink>
-                            <i class="ri-facebook-box-fill"></i>
-                            <i class="ri-linkedin-box-fill"></i>
+                            <i className="ri-facebook-box-fill"></i>
+                            <i className="ri-linkedin-box-fill"></i>
                         </li>
                     </ul>
                 </div>

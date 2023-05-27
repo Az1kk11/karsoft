@@ -1,14 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Button from '../assets/UI/Button/button'
 import { Col, Container, Row } from 'reactstrap'
 
 import vacansyImg from '../assets/imags/vacansy.png'
 import vacansySircle from '../assets/imags/Ellipse.png'
-
+import { vacansyStart, vacansySuccess, vacansyFailure } from '../Redux/slice/vacanciySlice'
+import vacansyServices from '../Redux/services/vacansy'
+import { useDispatch, useSelector } from 'react-redux'
 import '../css/Vacansy.css'
 
 function Vacansy() {
+    const dispatch = useDispatch()
+    const { vacansy, isLoading } = useSelector(state => state.vacansy)
+console.log(vacansy);
+    const getVacansy = async () => {
+        dispatch(vacansyStart)
+        try {
+            const response = await vacansyServices.vacansyData()
+            dispatch(vacansySuccess(response.data))
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    useEffect(()=>{
+        getVacansy()
+    },[])
+
     return (
         <section id='vacansy'>
             <Container>
@@ -24,7 +42,7 @@ function Vacansy() {
                                     {vacansy.map((item, index) => (
                                         <li key={index}>
                                             <span></span>
-                                            {item.display}
+                                            {item.title}
                                         </li>
                                     ))}
                                 </ul>

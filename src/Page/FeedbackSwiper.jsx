@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { Container } from 'reactstrap'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -13,8 +13,28 @@ import slideRight from '../assets/imags/avatar-right.png'
 import slideTop from '../assets/imags/slidetop.png'
 
 import { A11y, Pagination, Autoplay } from 'swiper';
+import { useDispatch, useSelector } from 'react-redux';
+import { feedbackStart, feedbackSuccess } from '../Redux/slice/feedbackSlice'
+import FeedbaskServices from '../Redux/services/feedback'
+import { Rating } from '@mui/material';
 
 function FeedbackSwiper() {
+    const dispatch = useDispatch()
+    const { feedback, isLoading } = useSelector(state => state.feedback)
+
+    const getFeedback = async () => {
+        dispatch(feedbackStart())
+        try {
+            const response = await FeedbaskServices.feedbackData()
+            dispatch(feedbackSuccess(response.data))
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    useEffect(() => {
+        getFeedback()
+    }, [])
+
     return (
         <section className='feedback'>
             <Container>
@@ -24,74 +44,30 @@ function FeedbackSwiper() {
                     <img src={slideLeft} alt="" className='slide-left' data-aos="fade-right" />
                     <img src={slideRight} alt="" className='slide-right' data-aos="fade-left" />
                     <img src={slideTop} alt="" className='slide-top' />
-                    <Swiper
-                        modules={[Pagination, A11y, Autoplay]}
-                        spaceBetween={50}
-                        slidesPerView={1}
-                        pagination={{ clickable: true }}
-                        autoplay={true}
-                    >
-                        <SwiperSlide>
-                            <p>Imperdiet tortor elit lacus venenatis nulla semper. Elementum nibh quis porta consequat, lacinia nunc a lacus, mattis. Cursus eu eget ridiculus at pellentesque in tempor arcu scelerisque. Eros tristique rhoncus blandit nulla rutrum pellentesque ut ac tellus. At blandit nunc nibh egestas lacinia massa magnis </p>
-                            <div className="star-group">
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                            </div>
-                            <h5>Abdulaziz Abdinazarov</h5>
-                            <h6>Design group. Art direktor</h6>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <p>Imperdiet tortor elit lacus venenatis nulla semper. Elementum nibh quis porta consequat, lacinia nunc a lacus, mattis. Cursus eu eget ridiculus at pellentesque in tempor arcu scelerisque. Eros tristique rhoncus blandit nulla rutrum pellentesque ut ac tellus. At blandit nunc nibh egestas lacinia massa magnis </p>
-                            <div className="star-group">
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                            </div>
-                            <h5>Abdulaziz Abdinazarov</h5>
-                            <h6>Design group. Art direktor</h6>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <p>Imperdiet tortor elit lacus venenatis nulla semper. Elementum nibh quis porta consequat, lacinia nunc a lacus, mattis. Cursus eu eget ridiculus at pellentesque in tempor arcu scelerisque. Eros tristique rhoncus blandit nulla rutrum pellentesque ut ac tellus. At blandit nunc nibh egestas lacinia massa magnis </p>
-                            <div className="star-group">
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                            </div>
-                            <h5>Abdulaziz Abdinazarov</h5>
-                            <h6>Design group. Art direktor</h6>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <p>Imperdiet tortor elit lacus venenatis nulla semper. Elementum nibh quis porta consequat, lacinia nunc a lacus, mattis. Cursus eu eget ridiculus at pellentesque in tempor arcu scelerisque. Eros tristique rhoncus blandit nulla rutrum pellentesque ut ac tellus. At blandit nunc nibh egestas lacinia massa magnis </p>
-                            <div className="star-group">
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                            </div>
-                            <h5>Abdulaziz Abdinazarov</h5>
-                            <h6>Design group. Art direktor</h6>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <p>Imperdiet tortor elit lacus venenatis nulla semper. Elementum nibh quis porta consequat, lacinia nunc a lacus, mattis. Cursus eu eget ridiculus at pellentesque in tempor arcu scelerisque. Eros tristique rhoncus blandit nulla rutrum pellentesque ut ac tellus. At blandit nunc nibh egestas lacinia massa magnis </p>
-                            <div className="star-group">
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                                <i className="ri-star-fill"></i>
-                            </div>
-                            <h5>Abdulaziz Abdinazarov</h5>
-                            <h6>Design group. Art direktor</h6>
-                        </SwiperSlide>
-                    </Swiper>
+                    {isLoading ? (
+                        <h3 className='text-light'>Loading...</h3>
+                    ) : (
+                        <Swiper
+                            modules={[Pagination, A11y, Autoplay]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            pagination={{ clickable: true }}
+                            autoplay={true}
+                        >
+                            {feedback.map(item => (
+                                <SwiperSlide key={item.id}>
+                                    <p>{item.text}</p>
+                                    <Rating
+                                        value={item.rating}
+                                        className='mt-2 mb-2'
+                                    />
+                                    <h5>{item.name}</h5>
+                                    <h6>{item.title}</h6>
+                                </SwiperSlide>
+                            ))}
+
+                        </Swiper>
+                    )}
                 </div>
             </Container>
         </section>
