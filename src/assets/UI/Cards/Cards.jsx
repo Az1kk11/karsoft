@@ -10,12 +10,13 @@ function Cards({ projects }) {
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="2000">
                     <div className="image-content">
-                        <img src={item.img} alt="Title" />
+                        <img src={item?.images[0]?.url} alt="Title" />
                     </div>
                     <div className="text-content">
                         <div className='card-title'>
                             <h3>{item.title}</h3>
                             <h5>{item.description}</h5>
+                            <h5>{item.category_title}</h5>
                         </div>
                         <motion.div whileTap={{ scale: 0.9 }} className="icon-card">
                             <i className="ri-arrow-right-up-line"></i>

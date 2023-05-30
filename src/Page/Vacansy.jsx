@@ -5,15 +5,15 @@ import { Col, Container, Row } from 'reactstrap'
 
 import vacansyImg from '../assets/imags/vacansy.png'
 import vacansySircle from '../assets/imags/Ellipse.png'
-import { vacansyStart, vacansySuccess, vacansyFailure } from '../Redux/slice/vacanciySlice'
+import { vacansyStart, vacansySuccess } from '../Redux/slice/vacanciySlice'
 import vacansyServices from '../Redux/services/vacansy'
 import { useDispatch, useSelector } from 'react-redux'
 import '../css/Vacansy.css'
 
 function Vacansy() {
     const dispatch = useDispatch()
-    const { vacansy, isLoading } = useSelector(state => state.vacansy)
-console.log(vacansy);
+    const { vacansy } = useSelector(state => state.vacansy)
+
     const getVacansy = async () => {
         dispatch(vacansyStart)
         try {
@@ -23,9 +23,9 @@ console.log(vacansy);
             console.log(error);
         }
     }
-    useEffect(()=>{
+    useEffect(() => {
         getVacansy()
-    },[])
+    }, [])
 
     return (
         <section id='vacansy'>

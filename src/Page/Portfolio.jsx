@@ -1,28 +1,56 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-import data from '../assets/manifest.json'
+import { projectStart, projectSuccess } from '../Redux/slice/projectSlice'
+import ProjectServices from '../Redux/services/projects'
+import CategoriesServices from '../Redux/services/category'
 
+import { categoriesStart, categoriesSuccess } from '../Redux/slice/categorieSlice'
 import { Container } from 'reactstrap'
-import Cards from '../assets/UI/Cards/Cards'
 import { motion } from 'framer-motion'
+
+import Cards from '../assets/UI/Cards/Cards'
 
 import '../css/Portfolio.css'
 
 function Portfolio() {
-    const [filter, setFilter] = useState('website')
+    const dispatch = useDispatch()
+    const { project, isLoading } = useSelector(state => state.project)
+    const { categories } = useSelector(state => state.categorie)
+    const [filter, setFilter] = useState('Martketing')
     const [projects, setProjects] = useState([])
 
     useEffect(() => {
-        setProjects(data.cards)
-    }, [])
-
-    useEffect(() => {
         setProjects([])
-        const filtered = data.cards.map(p => ({
-            ...p, filtered: p.type.includes(filter)
+        const filtered = project.map(p => ({
+            ...p, filtered: p.category_title.includes(filter)
         }));
         setProjects(filtered)
-    }, [filter])
+    }, [project, filter])
+
+    const getCategories = async () => {
+        dispatch(categoriesStart())
+        try {
+            const response = await CategoriesServices.categoriesData()
+            dispatch(categoriesSuccess(response.data))
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const getProject = async () => {
+        dispatch(projectStart())
+        try {
+            const response = await ProjectServices.projectsData()
+            dispatch(projectSuccess(response.data))
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    useEffect(() => {
+        getProject()
+        getCategories()
+    }, [])
 
     return (
         <section id='portfolio'>
@@ -37,18 +65,22 @@ function Portfolio() {
                                 data-aos-easing="ease-in-sine">Galereya</h2>
                         </div>
                         <ul>
-                            {category.map((item, index) => (
+                            {categories.map((item, index) => (
                                 <motion.li
                                     data-aos="fade-up"
-                                    className={filter === item.type ? 'active' : ''}
-                                    onClick={() => setFilter(item.type)}
+                                    className={filter === item.title ? 'active' : ''}
+                                    onClick={() => setFilter(item.title)}
                                     whileTap={{ scale: 0.9 }}
                                     key={index}
-                                >{item.display}</motion.li>
+                                >{item.title}</motion.li>
                             ))}
                         </ul>
                     </div>
-                    <Cards projects={projects} />
+                    {isLoading ? (
+                        <h3 className='text-center mt-5 mb-5'>Loading...</h3>
+                    ):(
+                        <Cards projects={projects} />
+                    )}
                 </div>
             </Container>
         </section>
@@ -57,11 +89,3 @@ function Portfolio() {
 }
 
 export default Portfolio
-
-const category = [
-    { display: 'Website', type: 'website' },
-    { display: 'Apps', type: 'apps' },
-    { display: 'Telegram bot', type: 'telegram-bot' },
-    { display: 'UX/UI', type: 'ux/ui' },
-    { display: 'Marketing', type: 'marketing' }
-]
