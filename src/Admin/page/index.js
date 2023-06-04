@@ -1,0 +1,7 @@
+export { default as Categories } from './Categories/Categories'
+export { default as AdminLogin } from './adminLogin'
+export { default as CategoriesPut } from './Categories/CategoriesPut'
+export { default as Projects } from './Projects/Projects'
+export { default as ProjectCreate } from './Projects/ProjectCreate'
+export { default as Feedback } from './Feedback/Feedback'
+export { default as FeedbackCreate } from './Feedback/FeedbackCreate'

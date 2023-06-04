@@ -1,8 +1,14 @@
+import { useLocation } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
 
+import Layouts from './Admin/Layots/layouts'
+
 function App() {
+  const location = useLocation()
   return (
-    <Layout />
+    <>
+      { location.pathname.startsWith('/admin') ? <Layouts/> : <Layout /> }
+    </>
   )
 }
 

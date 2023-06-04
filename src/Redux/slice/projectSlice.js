@@ -18,17 +18,34 @@ export const projectSlice = createSlice({
             state.isLoading = false
             state.project = action.payload
         },
-        projectFailure : (state, action) => {
+        projectFailure: (state, action) => {
             state.isLoading = false
             state.error = action.payload
-        }
+        },
+
+        postProjectStart: state => {
+            state.isLoading = true
+        },
+        postProjectSuccess: state => {
+            state.isLoading = false
+        },
+        postProjectFailure: state => {
+            state.isLoading = false
+            state.error = 'Error'
+        },
     }
 })
 
 export const {
     projectStart,
     projectSuccess,
-    projectFailure
+    projectFailure,
+
+    postProjectStart,
+    postProjectSuccess,
+    postProjectFailure,
+    
+
 } = projectSlice.actions
 
 export default projectSlice.reducer

@@ -58,6 +58,8 @@ function FeedbackSwiper() {
                                 <SwiperSlide key={item.id}>
                                     <p>{item.text}</p>
                                     <Rating
+                                        name='read-only'
+                                        readOnly
                                         value={item.rating}
                                         className='mt-2 mb-2'
                                     />

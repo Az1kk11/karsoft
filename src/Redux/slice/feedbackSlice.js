@@ -21,14 +21,30 @@ export const feedbackSlice = createSlice({
         feedbackFailure : (state, action) => {
             state.isLoading = false
             state.error = action.payload
-        }
+        },
+
+        postFeedbackStart: state => {
+            state.isLoading = true
+        },
+        postFeedbackSuccess: state => {
+            state.isLoading = false
+        },
+        postFeedbackFailure: state => {
+            state.isLoading = false
+            state.error = 'Error'
+        },
     }
 })
 
 export const {
     feedbackStart,
     feedbackSuccess,
-    feedbackFailure
+    feedbackFailure,
+
+    postFeedbackStart,
+    postFeedbackSuccess,
+    postFeedbackFailure
+    
 } = feedbackSlice.actions
 
 export default feedbackSlice.reducer

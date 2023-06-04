@@ -17,10 +17,6 @@ a {
   color: unset;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0;
 }
-
-/* body::-webkit-scrollbar-thumb {
-  background: #009846;
-} */

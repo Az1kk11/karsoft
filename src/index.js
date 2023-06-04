@@ -4,14 +4,15 @@ import AOS from 'aos';
 
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './Redux/store/index'
+import { ToastContainer } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 import "bootstrap/dist/css/bootstrap.css";
 import 'remixicon/fonts/remixicon.css'
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import './index.css';
-import { Provider } from 'react-redux';
-import store from './Redux/store/index'
-import { ToastContainer } from 'react-toastify';
 
 AOS.init();
 

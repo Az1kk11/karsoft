@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-
 const initialState = {
     isLoading: false,
     categories: [],
@@ -18,17 +17,32 @@ export const categoriesSlice = createSlice({
             state.isLoading = false
             state.categories = action.payload
         },
-        categoriesFailure : (state, action) => {
+        categoriesFailure: (state, action) => {
             state.isLoading = false
             state.error = action.payload
-        }
+        },
+
+        postCategorieStart: state => {
+            state.isLoading = true
+        },
+        postCategorieSuccess: state => {
+            state.isLoading = false
+        },
+        postCategorieFailure: state => {
+            state.isLoading = false
+            state.error = 'Error'
+        },
     }
 })
 
 export const {
     categoriesStart,
     categoriesSuccess,
-    categoriesFailure
+    categoriesFailure,
+
+    postCategorieStart,
+    postCategorieSuccess,
+    postCategorieFailure
 } = categoriesSlice.actions
 
 export default categoriesSlice.reducer

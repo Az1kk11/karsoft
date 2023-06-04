@@ -1,0 +1,28 @@
+.feedback-page{
+    width: 100%;
+    height: 100vh;
+    padding: 30px 0;
+}
+.feedback-page h3{
+    font-size: 22px;
+    font-weight: 400;
+}
+.feedback-page .add-feedback{
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+}
+.feedback-page .add-feedback:hover{
+    color: rgb(195, 195, 195);
+}
+.feedback-page tbody .text{
+    font-size: 14px;
+}
+.feedback-page .home-feedback{
+    cursor: pointer;
+}
+.feedback-page .MuiRating-root {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
