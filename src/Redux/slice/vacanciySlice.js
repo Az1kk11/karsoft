@@ -21,14 +21,29 @@ export const vacansySlice = createSlice({
         vacansyFailure : (state, action) => {
             state.isLoading = false
             state.error = action.payload
-        }
+        },
+
+        postVacansyStart: state => {
+            state.isLoading = true
+        },
+        postVacansySuccess: state => {
+            state.isLoading = false
+        },
+        postVacansyFailure: state => {
+            state.isLoading = false
+            state.error = 'Error'
+        },
     }
 })
 
 export const {
     vacansyStart,
     vacansySuccess,
-    vacansyFailure
+    vacansyFailure,
+
+    postVacansyStart,
+    postVacansySuccess,
+    postVacansyFailure
 } = vacansySlice.actions
 
 export default vacansySlice.reducer

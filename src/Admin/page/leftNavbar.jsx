@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 
 import { logoutAdmin } from '../../Redux/slice/authSlice'
 import { removeItem } from '../../Redux/helpers/persistance-storage'
+
 import '../css/sidebar.css'
 
 function LeftNavbar() {
@@ -59,9 +60,9 @@ function LeftNavbar() {
 export default LeftNavbar
 
 const navbarItems = [
-    { title: 'Categories', navigate: '/admin', icon: <i className="ri-bar-chart-horizontal-line"></i> },
+    { title: 'Categories', navigate: '/admin/categories', icon: <i className="ri-bar-chart-horizontal-line"></i> },
     { title: 'Project', navigate: '/admin/projects', icon: <i className="ri-product-hunt-line"></i> },
     { title: 'Feedback', navigate: '/admin/feedback', icon: <i className="ri-add-circle-line"></i> },
-    { title: 'Vacanci', navigate: '/admin/vacanci', icon: <i className="ri-order-play-line"></i> },
+    { title: 'Vacanci', navigate: '/admin/vacancy', icon: <i className="ri-order-play-line"></i> },
     { title: 'Responds', navigate: '/admin/responds', icon: <i className="ri-user-search-line"></i> },
 ]

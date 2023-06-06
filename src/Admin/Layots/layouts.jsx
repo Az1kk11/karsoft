@@ -1,5 +1,5 @@
 import React from 'react'
-import LeftNavbar from '../ux/leftNavbar'
+import { LeftNavbar } from '../page'
 import Routers from '../../Routers/routers'
 
 import './layouts.css'

@@ -15,7 +15,7 @@ function Vacansy() {
     const { vacansy } = useSelector(state => state.vacansy)
 
     const getVacansy = async () => {
-        dispatch(vacansyStart)
+        dispatch(vacansyStart())
         try {
             const response = await vacansyServices.vacansyData()
             dispatch(vacansySuccess(response.data))

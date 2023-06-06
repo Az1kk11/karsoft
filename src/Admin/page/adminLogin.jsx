@@ -32,7 +32,7 @@ function AdminLogin() {
 
   useEffect(() => {
     if (logedIn) {
-      navigate('/admin')
+      navigate('/admin/categories')
     }
   }, [logedIn])
 
