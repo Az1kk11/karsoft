@@ -158,3 +158,39 @@
         width: 140px;
     }
 }
+
+
+#vacansy .respons-vacansy{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 800px !important;
+    height: auto !important;
+    background: rgba(0, 0, 0, 0.817);
+    z-index: 888;
+    padding: 20px;
+}
+#vacansy .respons-vacansy p{
+    color: #fff !important;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 0 !important;
+}
+#vacansy .respons-vacansy i{
+    color: #fff;
+    font-size: 24px;
+}
+#vacansy button{
+    position: relative;
+}
+#vacansy button i{
+    font-size: 25px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+#vacansy .respons-vacansy Button{
+    padding: 7px 10px;
+    margin-top: 20px;
+}

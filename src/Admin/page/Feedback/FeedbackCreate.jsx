@@ -39,56 +39,46 @@ function FeedbackCreate() {
     }
 
     return (
-        <section className='feedback-page'>
-            <Container>
-                <h3 className='text-light mt-3 mb-5 home-feedback'>
-                    <span onClick={() => navigate('/admin/feedback')}>
-                        Feedback
-                    </span>
-                    - create
-                </h3>
-                <Form onSubmit={handleSubmit}>
-                    <FormGroup>
-                        <Label className='text-light'>Title</Label>
-                        <Input
-                            name="title"
-                            type="text"
-                            value={title}
-                            onChange={e => setTilte(e.target.value)}
-                            required
-                        />
-                        <Label className='text-light'>Text</Label>
-                        <Input
-                            name="text"
-                            type="text"
-                            value={text}
-                            onChange={e => setText(e.target.value)}
-                            required
-                        />
-                        <Label className='text-light'>Name</Label>
-                        <Input
-                            name="name"
-                            type="text"
-                            value={name}
-                            onChange={e => setName(e.target.value)}
-                            required
-                        />
-                    </FormGroup>
-                    <h6 className='text-light'>Rating</h6>
-                    <Rating
-                        name="hover-feedback"
-                        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-                        value={rating}
-                        onChange={(event, newValue) => {
-                            setRating(newValue);
-                        }}
-                    />
-                    <Button type='submit' className='d-block mt-3'>
-                        {isLoading ? 'Creting...' : 'Create' }
-                    </Button>
-                </Form>
-            </Container>
-        </section>
+        <Form onSubmit={handleSubmit}>
+            <FormGroup>
+                <Label className='text-light'>Title</Label>
+                <Input
+                    name="title"
+                    type="text"
+                    value={title}
+                    onChange={e => setTilte(e.target.value)}
+                    required
+                />
+                <Label className='text-light'>Text</Label>
+                <Input
+                    name="text"
+                    type="text"
+                    value={text}
+                    onChange={e => setText(e.target.value)}
+                    required
+                />
+                <Label className='text-light'>Name</Label>
+                <Input
+                    name="name"
+                    type="text"
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                    required
+                />
+            </FormGroup>
+            <h6 className='text-light'>Rating</h6>
+            <Rating
+                name="hover-feedback"
+                emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+                value={rating}
+                onChange={(event, newValue) => {
+                    setRating(newValue);
+                }}
+            />
+            <Button type='submit' className='d-block mt-3'>
+                {isLoading ? 'Creting...' : 'Create'}
+            </Button>
+        </Form>
     )
 }
 

@@ -4,8 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import vacansyServices from '../../../Redux/services/vacansy'
 import { postVacansyFailure, postVacansyStart, postVacansySuccess, vacansyStart, vacansySuccess } from '../../../Redux/slice/vacanciySlice'
 
-import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap'
-import TableUI from '../../ux/Table/table'
+import { Button, Container, Form, FormGroup, Input, Label, Table } from 'reactstrap'
 import { toast } from 'react-toastify'
 
 import '../../css/Vacancy.css'
@@ -97,7 +96,37 @@ function Vacansy() {
                         {isLoading ? 'Loading...' : 'Create'}
                     </Button>
                 </Form>
-                <TableUI data={vacansy} thead={theadName} deleteHandler={deleteHandler} />
+                <div className="table-vacancy">
+                    <Table
+                        className='mt-4'
+                    >
+                        <thead>
+                            <tr className='text-light'>
+                                {theadName?.map((item, index) => (
+                                    <th key={index}>{item?.name}</th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody className='text-light'>
+                            {vacansy?.map(item => (
+                                <tr key={item?.id}>
+                                    <th>{item?.id}</th>
+                                    <td>{item?.title}</td>
+                                    <td>{item?.description}</td>
+                                    <td>
+                                        <Button
+                                            color='danger'
+                                            className='p-1'
+                                            onClick={() => deleteHandler(item.id)}
+                                        >
+                                            Delete
+                                        </Button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </Table>
+                </div>
             </Container>
         </section>
     )

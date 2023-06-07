@@ -37,6 +37,9 @@
     align-items: center;
 }
 
+.sidebar-left .logo-admin{
+    width: 120px;
+}
 .sidebar-menu .sidebar i {
     margin-right: 10px;
     font-size: 20px;

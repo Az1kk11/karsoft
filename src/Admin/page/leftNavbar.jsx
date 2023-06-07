@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 
 import { logoutAdmin } from '../../Redux/slice/authSlice'
 import { removeItem } from '../../Redux/helpers/persistance-storage'
-
+import logo from '../../assets/imags/karsoft.png'
 import '../css/sidebar.css'
 
 function LeftNavbar() {
@@ -30,12 +30,14 @@ function LeftNavbar() {
             >
                 {isOpen ? (
                     <i className="ri-arrow-left-line"
-                        style={{ paddingRight: isOpen ? '30px' : '0px' }}
+                        style={{ paddingRight: isOpen ? '10px' : '0px' }}
                         onClick={toggle}></i>
                 ) : (
                     <i className="ri-menu-line" onClick={toggle}></i>
                 )}
-                <h4 style={{ display: isOpen ? 'block' : 'none' }}>Sayla</h4>
+                <div style={{ display: isOpen ? 'block' : 'none' }}>
+                    <img className='logo-admin' src={logo} alt="" />
+                </div>
             </div>
             <ul className='sidebar-menu'>
                 {navbarItems.map((item, index) => (

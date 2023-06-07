@@ -43,6 +43,7 @@ function Categories() {
     try {
       await CategoriesServices.categoriesPost(categories)
       dispatch(postCategorieSuccess())
+      getCategories()
       toast.success('Categorie succesfuly created')
     } catch (error) {
       toast.error(error.response.data.message)
