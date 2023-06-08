@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState = {
     isLoading: false,
     responVacan: [],
+    responDetail: [],
     error: null
 }
 
@@ -16,7 +17,7 @@ export const responVacanSlice = createSlice({
         },
         responVacanSuccess: (state, action) => {
             state.isLoading = false
-            state.feedback = action.payload
+            state.responVacan = action.payload
         },
         responVacanFailure: (state, action) => {
             state.isLoading = false
@@ -33,6 +34,17 @@ export const responVacanSlice = createSlice({
             state.isLoading = false
             state.error = 'Error'
         },
+        
+        getResponDetailStart: state => {
+            state.isLoading = true
+        },
+        getResponDetailSuccess: (state, action) => {
+            state.isLoading = false
+            state.responDetail = action.payload
+        },
+        getResponDetailFailure: (state, action) => {
+            state.isLoading = false
+        },
     }
 })
 
@@ -43,7 +55,11 @@ export const {
 
     postresponVacanStart,
     postresponVacanSuccess,
-    postresponVacanFailure
+    postresponVacanFailure,
+
+    getResponDetailStart,
+    getResponDetailSuccess,
+    getResponDetailFailure
 
 } = responVacanSlice.actions
 
