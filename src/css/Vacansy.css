@@ -181,6 +181,9 @@
     color: #fff;
     font-size: 24px;
 }
+#vacansy .respons-vacansy select{
+    width: 100%;
+}
 #vacansy button{
     position: relative;
 }
@@ -193,4 +196,44 @@
 #vacansy .respons-vacansy Button{
     padding: 7px 10px;
     margin-top: 20px;
+}
+
+@media (max-width: 870px) {
+    #vacansy .respons-vacansy{
+        width: 600px !important;
+    }
+    #vacansy button{
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 650px) {
+    #vacansy .respons-vacansy{
+        width: 400px !important;
+    }
+    #vacansy button{
+        width: auto;
+        height: 30px;
+    }
+    #vacansy .respons-vacansy Input{
+        height: 30px;
+    }
+    #vacansy .respons-vacansy Label{
+        font-size: 15px;
+        margin-top: 5px;
+    }
+}
+@media (max-width: 500px) {
+    #vacansy .respons-vacansy{
+        width: 100% !important;
+        top: 200px;
+    }
+}
+@media (max-width: 320px){
+    #vacansy .respons-vacansy p{
+        margin: 0;
+        font-weight: 400;
+    }
 }

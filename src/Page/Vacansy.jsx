@@ -11,18 +11,22 @@ import '../css/Vacansy.css'
 import RespondsVacancyServices from '../Redux/services/respons'
 import { postresponVacanStart, postresponVacanSuccess } from '../Redux/slice/respondsVacSlice'
 import { toast } from 'react-toastify'
+import SelectUI from '../assets/UI/select/selectUI'
 
 function Vacansy() {
     const dispatch = useDispatch()
+
     const { vacansy, isLoading } = useSelector(state => state.vacansy)
+
     const [open, setOpen] = useState(false)
     const toggle = () => setOpen(!open)
+
+    const [selected, setSelected] = useState('Ish orinlari')
+    const [selectValue, setSelectValue] = useState()
     const [values, setValues] = useState({
-        vacancy_id: '',
         name: '',
         phone: '',
-        email:'',
-        text:''
+        email: '',
     })
 
     const getVacansy = async () => {
@@ -34,20 +38,21 @@ function Vacansy() {
             console.log(error);
         }
     }
+
     useEffect(() => {
         getVacansy()
     }, [])
 
-    const handleSubmit = async e =>{
+    const handleSubmit = async e => {
         e.preventDefault()
         dispatch(postresponVacanStart())
         const responsVacansy = new FormData()
 
-        responsVacansy.set('vacancy_id', values.vacancy_id)
+        responsVacansy.set('vacancy_id', selectValue)
         responsVacansy.set('name', values.name)
         responsVacansy.set('phone', values.phone)
         responsVacansy.set('email', values.email)
-        responsVacansy.set('text', values.text)
+        responsVacansy.set('text', selected)
 
         try {
             await RespondsVacancyServices.postRespondsVacancy(responsVacansy)
@@ -90,40 +95,40 @@ function Vacansy() {
                     </Col>
 
                     <div className="respons-vacansy" style={{ display: open ? 'block' : 'none' }}>
+
                         <div className="d-flex justify-content-between">
                             <p>Biz siz bilan boglanamiz</p>
                             <i onClick={toggle} className="ri-close-line"></i>
                         </div>
-                        
+
                         <Form onSubmit={handleSubmit}>
+
                             <Label className='text-light' >Name</Label>
-                            <Input type="text" name='name'  
+                            <Input type="text" name='name'
                                 onChange={onChangeValue}
                             />
+
                             <Label className='text-light' >Phone</Label>
                             <Input type="text" name='phone'
                                 onChange={onChangeValue}
                             />
+
                             <Label className='text-light' >Email</Label>
-                            <Input type='email' name='email' 
+                            <Input type='email' name='email'
                                 onChange={onChangeValue}
                             />
-                            <Label className='text-light' >Ish orni</Label>
-                            <Input type='text' name='text' 
-                                onChange={onChangeValue}
+
+                            <SelectUI
+                                option={vacansy}
+                                selected={selected}
+                                setSelected={setSelected}
+                                setSelectValue={setSelectValue}
                             />
-                            <Input type='select' 
-                                className='mt-4'
-                                onChange={onChangeValue}
-                                name='vacancy_id'
-                            >
-                                {vacansy?.map(item => (
-                                    <option key={item.id} value={item.id}>{item.title}</option>
-                                ))}
-                            </Input>
+
                             <button type='submit' className='btn btn-success'>
                                 {isLoading ? 'Loading...' : 'Xabar qoldirish'}
                             </button>
+
                         </Form>
                     </div>
 
@@ -140,12 +145,3 @@ function Vacansy() {
 }
 
 export default Vacansy
-
-const vacansy = [
-    { display: 'Frontend developer' },
-    { display: 'Backend developer' },
-    { display: 'Python developer' },
-    { display: 'UX/UI dizayner' },
-    { display: 'Marketolog' },
-    { display: 'Grafik dizayner' },
-]
